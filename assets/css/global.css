@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+
+/* 
+    TABLE OF CONTENTS
+    ========================================================================= */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900');
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+article, aside, details, figcaption,
+figure, footer, header, hgroup, menu,
+nav, section {
+	display: block;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+	padding-left: 0px;
+}
+
+img{
+	max-width: 100%;
+}
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a:focus, a:active {
+	text-decoration: none;
+	outline: 0;
+}
+
+
+/* ===========   2. DOCUMENT STYLES
+   ========================================================================= */
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.4;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-size: auto;
+	font-weight: 400;
+	color: #44444E;
+}
+
+
+/* ================    3. TYPOGRAPHY 
+   ========================================================================= */
+
+p{
+	margin-bottom: 30px;
+}
+
+p, a, span {
+	line-height: 135%;
+	
+}
+
+
+a:hover {
+	text-decoration: none;
+}
+
+strong {
+	font-weight: 700;
+}
+
+strong a:hover {
+	text-decoration: underline;
+}
+
+ul, ol {
+	list-style-position: inside;
+	list-style-type: none;
+}
+
+ul li, ol li {
+	padding-bottom: 0;
+}
+
+ol, ul {
+	padding-left: 0
+}
+
+em {
+	font-style: normal;
+}
+hr {
+	margin-top: 40px;
+	margin-bottom: 40px
+}
+
+ul, li {
+	list-style: none;
+}
+ 
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus, a:hover {
+	color: #e3e0e0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: inherit;
+	line-height: 1.3;
+	margin: 0px;
+	padding: 0px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	
+}
+
+
+.h1, h1 {
+	font-size: 46px;
+}
+
+.h2, h2 {
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.h3, h3 {
+	font-size: 24px;
+}
+
+.h4, h4 {
+	font-size: 18px;
+	margin-bottom: 15px;
+	font-weight: 500;
+	line-height:22px
+}
+
+.h5, h5 {
+	font-weight:700;
+	font-size:16px;
+	margin-bottom: 15px;
+}
+
+.h6, h6 {
+	font-weight: 600;
+	font-size: 14px;
+	margin-bottom: 30px;    
+	letter-spacing: .25px;	
+}
+
+
+
+.theme_btn{
+	text-align: center;
+	position: relative;
+	font-size: 14px;
+	color: #fff;
+	padding: 15px 50px;
+	font-weight: 500;
+	transition: all ease 0.3s;
+	cursor: pointer;
+	z-index: 5;
+	display: inline-block;
+	background: #1DC9FF;
+	border: 1px solid #fff;
+	border-radius: 5px;
+}
+.theme_btn.active,
+.theme_btn:hover{color: #1DC9FF;transition: all ease 0.3s;border: 1px solid #1DC9FF;background: #fff;}
+
+.block_md{display: none !important;}
+/*=========  backgroung color  ============*/
+
+.no-bg{
+	background: none !important;
+}
+.pdd_100{padding: 100px 0px;}
+
+
+
+.reveal-text,
+.reveal-text::after {
+	-webkit-animation-delay: 2s;
+	        animation-delay: 2s;
+	-webkit-animation-iteration-count: 1;
+	        animation-iteration-count: 1;
+	-webkit-animation-duration: 800ms;
+	        animation-duration: 800ms;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+	-webkit-animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+	        animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal-text {
+	position: relative;
+	-webkit-user-select: none;
+	        -moz-user-select: none;
+	         -ms-user-select: none;
+	     user-select: none;
+	-webkit-animation-name: clip-text;
+	        animation-name: clip-text;
+	cursor: default
+	
+}
+
+.reveal-text::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #F4F2F2;
+		-webkit-transform: scaleX(0);
+		        transform: scaleX(0);
+		-webkit-transform-origin: 0 50%;
+		        transform-origin: 0 50%;
+		pointer-events: none;
+		-webkit-animation-name: text-revealer;
+		        animation-name: text-revealer;
+	}
+
+
+@-webkit-keyframes clip-text {
+	from {
+		-webkit-clip-path: inset(0 100% 0 0);
+		        clip-path: inset(0 100% 0 0);
+	}
+	to {
+		-webkit-clip-path: inset(0 0 0 0);
+		        clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes clip-text {
+	from {
+		-webkit-clip-path: inset(0 100% 0 0);
+		        clip-path: inset(0 100% 0 0);
+	}
+	to {
+		-webkit-clip-path: inset(0 0 0 0);
+		        clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@-webkit-keyframes text-revealer {
+	
+	0%, 50% {
+		-webkit-transform-origin: 0 50%;
+		        transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		-webkit-transform-origin: 100% 50%;
+		        transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		-webkit-transform: scaleX(1);
+		        transform: scaleX(1);
+	}
+	
+	100% {
+		-webkit-transform: scaleX(0);
+		        transform: scaleX(0);
+	}
+}
+
+
+@keyframes text-revealer {
+	
+	0%, 50% {
+		-webkit-transform-origin: 0 50%;
+		        transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		-webkit-transform-origin: 100% 50%;
+		        transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		-webkit-transform: scaleX(1);
+		        transform: scaleX(1);
+	}
+	
+	100% {
+		-webkit-transform: scaleX(0);
+		        transform: scaleX(0);
+	}
+}
+
+
+
+.Symbol {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+  animation: explode .8s reverse forwards ease-in;
+}
+
+@-webkit-keyframes explode {
+  from {
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes explode {
+  from {
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+}
+
